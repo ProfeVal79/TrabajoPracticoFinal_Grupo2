@@ -100,7 +100,32 @@ biblioteca/
 
 ### `Decorador: loggear_accion`
 - Se aplica a métodos clave (`gestionar`, `agregar_material`, `agregar_usuario`).  
-- Imprime un log en consola cada vez que se ejecuta un método decorado.  
+- Imprime un log en consola cada vez que se ejecuta un método decorado.
+
+✅ Conclusión
+Este sistema demuestra cómo integrar conceptos avanzados de Python en un proyecto realista:
+
+Metaclases para imponer reglas globales.
+
+Decoradores para logging.
+
+Herencia y polimorfismo para jerarquías de usuarios.
+
+Agregación y composición para relaciones entre entidades.
+
+Singleton para garantizar una única instancia de la biblioteca.
+
+***BibliotecaDigital*** se implementa como ***Singleton*** porque en el modelo de una biblioteca digital, debe existir una única instancia centralizada que gestione todos los materiales y usuarios.
+
+
+### Justificación conceptual:
+
+Si tuviera varias instancias de ***BibliotecaDigital***, cada una tendría su propia lista de usuarios y materiales y eso generaría inconsistencias (un mismo libro podría estar duplicado en distintas bibliotecas, o un usuario podría existir en una pero no en otra).
+
+El patrón ***Singleton*** asegura que solo exista una biblioteca en todo el sistema, y que todas las operaciones (agregar usuarios, registrar préstamos, buscar materiales) se hagan sobre esa misma instancia.
+
+Es como tener una base de datos única que centraliza la información.
+
 
 ---
 
@@ -121,27 +146,11 @@ Materiales en la biblioteca:
 Usuarios en la biblioteca:
 - Valeria Igarzabal
 - Carlos Perez
-✅ Conclusión
-Este sistema demuestra cómo integrar conceptos avanzados de Python en un proyecto realista:
-
-Metaclases para imponer reglas globales.
-
-Decoradores para logging.
-
-Herencia y polimorfismo para jerarquías de usuarios.
-
-Agregación y composición para relaciones entre entidades.
-
-Singleton para garantizar una única instancia de la biblioteca.
-
-BibliotecaDigital se implementa como Singleton porque en el modelo de una biblioteca digital, debe existir una única instancia centralizada que gestione todos los materiales y usuarios.
 
 
-Justificación conceptual:
----
 
-Si tuviera varias instancias de BibliotecaDigital, cada una tendría su propia lista de usuarios y materiales y eso generaría inconsistencias (un mismo libro podría estar duplicado en distintas bibliotecas, o un usuario podría existir en una pero no en otra).
 
-El patrón Singleton asegura que solo exista una biblioteca en todo el sistema, y que todas las operaciones (agregar usuarios, registrar préstamos, buscar materiales) se hagan sobre esa misma instancia.
 
-Es como tener una base de datos única que centraliza la información.
+
+
+

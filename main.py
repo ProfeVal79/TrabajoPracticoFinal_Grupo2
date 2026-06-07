@@ -49,4 +49,18 @@ if __name__ == "__main__":
     for u in biblioteca.usuarios:
         print(f"- {u.nombre} {u.apellido}")
 
+    print(f"bienvenidos a la biblioteca: {biblioteca.nombre}")
+
+    biblioteca2 = BibliotecaDigital(2, "Biblioteca Central", "www.biblio.com", "info@biblio.com" )
+    print(f"bienvenidos a la biblioteca: {biblioteca2.nombre}")
+    print(biblioteca.nombre, biblioteca2.nombre)
+    print(biblioteca is biblioteca2)
+
+    print(biblioteca.id)
+
+    biblioteca2.registrar_usuario(usuario1)
+    usuario1.solicitar_baja()
+    admin1.gestionar_baja(usuario1)
+
+
 

@@ -7,6 +7,7 @@ class BibliotecaDigital(metaclass=MetaEntidad):
     def __new__(cls, id, nombre, url, email):
         if cls._instancia is None:
             cls._instancia = super().__new__(cls)
+            cls._instancia.usuarios = []
         return cls._instancia
 
     def __init__(self, id, nombre, url, email):
@@ -17,10 +18,19 @@ class BibliotecaDigital(metaclass=MetaEntidad):
         self.materiales = []   # agregación: lista de materiales
         self.usuarios = []
 
+    def registrar_usuario(self, usuario):
+        self.usuarios.append(usuario)
+
+    def eliminar_usuario(self, usuario):
+        if usuario in self.usuarios:
+            self.usuarios.remove(usuario)
+            print(f"Usuario {usuario.nombre} {usuario.apellido} eliminado de la biblioteca.")    
+
+
     @loggear_accion
     def agregar_material(self, material):
-        self.materiales.append(material)
+       self.materiales.append(material)
 
     @loggear_accion
     def agregar_usuario(self, usuario):
-        self.usuarios.append(usuario)
+       self.usuarios.append(usuario)

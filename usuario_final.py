@@ -5,6 +5,11 @@ class UsuarioFinal(Usuario):
     def __init__(self, id, nombre, apellido, dni, email, contrasenia):
         super().__init__(id, nombre, apellido, dni, email, contrasenia)
         self.historial_prestamo = []
+        self.solicitud_baja = False
+
+    def solicitar_baja(self):
+        self.solicitud_baja = True
+        print(f"El usuario {self.nombre} {self.apellido} solicitó la baja.")
 
     @loggear_accion
     def gestionar(self):

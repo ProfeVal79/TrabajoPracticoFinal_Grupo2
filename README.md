@@ -1,7 +1,7 @@
-# 📚 Biblioteca Digital en Python
+# 📚 Sistema de gestión de biblioteca Digital en Python
 
 ## 🔹 Descripción general
-Este proyecto implementa un sistema de **Biblioteca Digital** en Python, modelando usuarios, materiales digitales, préstamos y la propia biblioteca.  
+Este proyecto implementa un sistema de gestión de **Biblioteca Digital** en Python, modelando usuarios, materiales digitales, préstamos y la propia biblioteca.  
 Se aplican conceptos avanzados de programación orientada a objetos y patrones de diseño, integrando:
 
 - Herencia

@@ -2,7 +2,7 @@ from usuario import Usuario
 from decoradores import loggear_accion
 
 class UsuarioFinal(Usuario):
-    def __init__(self, id, nombre, apellido, dni, email, contrasenia):
+    def __init__(self,id, nombre, apellido, dni, email, contrasenia):
         super().__init__(id, nombre, apellido, dni, email, contrasenia)
         self.historial_prestamo = []
         self.solicitud_baja = False

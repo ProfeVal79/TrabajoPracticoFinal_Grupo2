@@ -17,7 +17,7 @@ if __name__ == "__main__":
     biblioteca.agregar_material(libro2)
 
     # Crear usuarios
-    usuario1 = UsuarioFinal(201, "Valeria", "Igarzabal", "12345678", "valeria@mail.com", "clave123")
+    usuario1 = UsuarioFinal(201,"Valeria", "Igarzabal", "12345678", "valeria@mail.com", "clave123")
     admin1 = Administrador(301, "Carlos", "Perez", "87654321", "carlos@mail.com", "adminpass", "Alto")
 
     biblioteca.agregar_usuario(usuario1)
@@ -47,11 +47,11 @@ if __name__ == "__main__":
 
     print("Usuarios en la biblioteca:")
     for u in biblioteca.usuarios:
-        print(f"- {u.nombre} {u.apellido}")
+        print(f"- {u.id} {u.nombre} {u.apellido}")
 
     print(f"bienvenidos a la biblioteca: {biblioteca.nombre}")
 
-    biblioteca2 = BibliotecaDigital(2, "Biblioteca Central", "www.biblio.com", "info@biblio.com" )
+    biblioteca2 = BibliotecaDigital("123","Biblioteca Central", "www.biblio.com", "info@biblio.com" )
     print(f"bienvenidos a la biblioteca: {biblioteca2.nombre}")
     print(biblioteca.nombre, biblioteca2.nombre)
     print(biblioteca is biblioteca2)
